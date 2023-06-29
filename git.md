@@ -4,6 +4,12 @@
 
 > Good commit message guide: https://hashnode.com/post/which-commit-message-convention-do-you-use-at-work-ck3e4jbdd00zyo4s1h7mc7e0g
 
+## SSH Key
+
+> Guide: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+> Guide: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+
 ## Basic
 
 > Basic git commands: https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
