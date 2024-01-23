@@ -30,37 +30,55 @@ git fetch --prune
 git branch --merged | grep -v \* | xargs git branch -D
 ```
 
-### 3. Cherry-pick commit:
+### 3. Delete all tracking branches whose remote equivalent no longer exists:
+
+```
+git fetch -p && for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}'); do git branch -D $branch; done
+```
+
+### 4. Cherry-pick commit:
 
 ```
 git cherry-pick <commit_hash>
 ```
 
-### 4. Reset repo to a particular commit (this deletes the changes made):
+### 5. Reset repo to a particular commit (this deletes the changes made):
 
 ```
  git reset --hard <commit_hash>
  git push -f <remote_name> main
 ```
 
-### 5. Rename a local branch:
+### 6. Rename a local branch:
 
 ```bash
 git branch -m <new_name>
 ```
 
-### 6. Viewing the difference in current code:
+### 7. Viewing the difference in current code:
 
 ```bash
 git diff
 ```
 
-### 7. Undo last commit:
+### 8. Undo last commit:
 
 ```bash
 git reset HEAD~
 ```
 
+## Git bisect
+
+> Guide: https://www.metaltoad.com/blog/beginners-guide-git-bisect-process-elimination
+
 ## Git Stash
+
+TODO
+
+## Git hunk
+
+TODO
+
+## Git amend in VSCode
 
 TODO
